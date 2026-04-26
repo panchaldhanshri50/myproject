@@ -1,5 +1,5 @@
- <?php
-include 'header.php';
+<?php
+session_start();
 include 'valid_conn.php';    
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -18,7 +18,7 @@ include 'valid_conn.php';
                 $_SESSION['name'] = $user['name'];
 
                 //after login redirect to upload page
-                header("Location: upload.php");
+                header("Location:upload.php");
                 exit();
             } else {
                 $error = "Incorrect password.";
@@ -27,11 +27,12 @@ include 'valid_conn.php';
             $error = "User not found.";
         }
     }
-    ?>
+include 'header.php';
+?>
 
 
- <!DOCTYPE html>
- <html>
+<!DOCTYPE html>
+<html>
 
  <head>
      <title>Login</title>
@@ -278,7 +279,7 @@ include 'valid_conn.php';
 
          </div>
 
-     </div>
+     </div> 
 <?php
 include "footer.php";
 ?>     

@@ -1,6 +1,9 @@
 <?php
-include 'header_user.php';
-// session_start();
+session_start();
+// echo "<pre>";
+// print_r($_SESSION);
+// echo "</pre>";
+// exit();
 if (!isset($_SESSION['user_id'])) {
   
     echo '
@@ -74,6 +77,7 @@ if (!isset($_SESSION['user_id'])) {
     ';
     exit; // stop execution after showing error page
 }
+include 'header_user.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -469,29 +473,29 @@ if (!isset($_SESSION['user_id'])) {
                             <!--subject selection-->
                             <div class="col">
                                 <label>Select Subject:</label>
-                                <select>
-                                    <option>-- Select Subject --</option>
-                                    <option>Java</option>
-                                    <option>DBMS</option>
-                                    <option>Python</option>
-                                    <option>Other</option>
+                                <select name="subject" id="subject" required>
+                                    <option value="">-- Select Subject --</option>
+                                    <option value="Java">Java</option>
+                                    <option value="DBMS">DBMS</option>
+                                    <option value="Python">Python</option>
+                                    <option value="">Other</option>
                                 </select>
                                 <p class="or-text">OR</p>
-                                <input type="text" placeholder="Enter other subject">
+                                <input type="text" placeholder="Enter other subject" name="other_subject" id="other_subject">
                             </div>
 
                             <!-- UNIVERSITY -->
                             <div class="col">
                                 <label>Select University *</label>
-                                <select>
-                                    <option>-- Select University --</option>
-                                    <option>GTU</option>
-                                    <option>Mumbai University</option>
-                                    <option>Pune University</option>
-                                    <option>Other</option>
+                                <select name="uni" id="uni" required>
+                                    <option value="">-- Select University --</option>
+                                    <option value="GTU">GTU</option>
+                                    <option value="MU">Mumbai University</option>
+                                    <option value="HNGU">HNGU</option>
+                                    <option value="">Other</option>
                                 </select>
                                 <p class="or-text">OR</p>
-                                <input type="text" placeholder="Enter other university">
+                                <input type="text" placeholder="Enter other university" name="other_uni" id="other_uni">
                             </div>
 
                             
@@ -502,20 +506,20 @@ if (!isset($_SESSION['user_id'])) {
                             <!-- COURSE -->
                             <div class="col">
                                 <label>Select Course *</label>
-                                <select>
-                                    <option>-- Select Course --</option>
-                                    <option>BCA</option>
-                                    <option>B.Tech</option>
-                                    <option>BSc IT</option>
-                                    <option>Other</option>
+                                <select name="course" id="course" required>
+                                    <option value="">-- Select Course --</option>
+                                    <option value="BCA">BCA</option>
+                                    <option value="BTech">B.Tech</option>
+                                    <option value="BSc IT">BSc IT</option>
+                                    <option value="">Other</option>
                                 </select>
                                 <p class="or-text">OR</p>
-                                <input type="text" placeholder="Enter other course">
+                                <input type="text" placeholder="Enter other course" name="other_course" id="other_course">
                             </div>
                             <!-- YEAR -->
                             <div class="col">
                                 <label>Year / Year Range *</label>
-                                <input type="text" placeholder="e.g. 2005-2007 or 2010">
+                                <input type="text" placeholder="e.g. 2005-2007 or 2010" name="year" id="year">
                             </div>
                         </div>
                         <hr width="100%" color=" #12457b"><br>

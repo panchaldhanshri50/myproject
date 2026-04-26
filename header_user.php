@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <style>
     nav a:link{
         text-decoration: none;
@@ -22,11 +20,11 @@ session_start();
     <nav style="display: flex; align-items: center; gap: 70px; margin-top: 30px;">
         <a href="index.php" style="color:white; margin-left:20px;"><i class="fas fa-home"></i>Home</a>
 
-        <?php if(isset($_SESSION['user_id'])): ?>
+        <!--  if(isset($_SESSION['user_id'])): ?> -->
             <!-- USER PANEL LINKS -->
             <a href="mysaved.php" style="color:white; margin-left:20px;">My Saved</a>
             <a href="logout.php" style="color:white; margin-left:20px;">Logout</a>
-        <?php endif; ?>
+        <!-- endif; ?> -->
         
     </nav>
 

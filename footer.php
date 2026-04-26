@@ -24,7 +24,16 @@
         <p>Common Question Detector &copy; 2025</p>
     </footer> -->
 <style>
-    
+    footer {
+        bottom: 0;
+        background-color: #12457b;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        flex-shrink: 0;
+        margin-top: auto;
+        margin-bottom:0;
+    }
 </style>
     <footer style="bottom: 0;
         background-color: #12457b;
