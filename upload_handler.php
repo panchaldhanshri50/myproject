@@ -79,6 +79,7 @@
                 $statusMsg .= "<p class='error-msg'>Only PDF files allowed: $file_name</p>";
             }
         } 
+    include 'header_user.php';
     echo '<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -86,21 +87,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Upload Results - Common Question Detector</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
         <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
+            // * {
+            //     margin: 0;
+            //     padding: 0;
+            //     box-sizing: border-box;
+            // }
             
-            body {
-                font-family: \"Segoe UI\", Tahoma, Geneva, Verdana, sans-serif;
-                background-color: #f5f7fa;
-                color: #333;
-                line-height: 1.5;
-                padding-top: 90px;
+            // body {
+            //     font-family: \"Segoe UI\", Tahoma, Geneva, Verdana, sans-serif;
+            //     background-color: #f5f7fa;
+            //     color: #333;
+            //     line-height: 1.5;
+            //     padding-top: 90px;
 
-            }
+            // }
             
             .container {
                 max-width: 1000px;
@@ -111,12 +113,12 @@
                 box-shadow: 0 3px 15px rgba(0,0,0,0.08);
             }
             
-            .header {
-                text-align: center;
-                margin-bottom: 25px;
-                padding-bottom: 15px;
-                border-bottom: 2px solid #eaeaea;
-            }
+            // .header {
+            //     text-align: center;
+            //     margin-bottom: 25px;
+            //     padding-bottom: 15px;
+            //     border-bottom: 2px solid #eaeaea;
+            // }
             
             h1 {
                 color: #2c3e50;
@@ -240,7 +242,7 @@
         </style>
     </head>
     <body>';
-    include "upload-nav.php";
+    // include "upload-nav.php";
     
       echo'<div class="container">
             <div class="header">
@@ -332,10 +334,11 @@
     </body>
     </html>';
 
-    echo '<footer>
-        <p>Common Question Detector &copy; 2023</p>
-    </footer>';
+    // echo '<footer>
+    //     <p>Common Question Detector &copy; 2023</p>
+    // </footer>';
 }
+include 'footer.php';
 ?>
 
 
